@@ -6,10 +6,11 @@ app = Flask(__name__)
 def index():
     try:
         raise Exception("Can't connect to database")
-    except Exception,e:
+    except Exception as e:
         # track= get_current_traceback(skip=1, show_hidden_frames=True,
         #     ignore_system_exceptions=False)
         # track.log()
+        print(e)
         abort(500)
     return "index"
 
