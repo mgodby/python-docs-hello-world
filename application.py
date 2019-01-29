@@ -17,7 +17,7 @@ def index():
 @app.errorhandler(500)
 def internal_error(error):
 
-    return "500 error - And Jonathan is pretty cool",500
+    return "500 Internal Server Error",500
 
 @app.errorhandler(404)
 def not_found(error):
